@@ -3,16 +3,22 @@ library for building an imessage bot
 
 ```
 imessage.bot
-- name 
-- shorthand
-- whitelist
-- blacklist
-- handler
+- *name string
+- shorthand int
+- whitelist_chats []string
+- blacklist_chats []string
+- ban_accounts []string
+- mod_accounts []string
+- max_consecutive int
+- *handler func(string, string string) string
   - IN: message, person, group_chat
   - OUT: message
 
-- groupchat_id (internal)
-  - last_message
-  - last_person
-  - consecutive_commands
+- chats
+  - groupchat_id 
+    - last_message
+    - last_person
+    - consecutive_commands
+    
+* = required
 ```
